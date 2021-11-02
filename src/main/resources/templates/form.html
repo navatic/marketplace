@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${titulo}"></title>
+	
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+</head>
+<body>
+<div class="container">
+	<h3 class="text-secondary text-center" th:text="${titulo}"></h3>
+
+	<form th:action="@{/form}" th:object="${usuario}" method="post">
+		<table>
+			<tr>
+				<td>USERNAME</td>
+				<td><input type="text" th:field="*{username}" /></td>
+			</tr>
+			<tr>
+				<td>PASSWORD</td>
+				<td><input type="text" th:field="*{password}" /></td>
+			</tr>
+			<tr>
+				<td>NAME</td>
+				<td><input type="text" th:field="*{name}" /></td>
+			</tr>
+			<tr>
+				<td>SURNAME_1</td>
+				<td><input type="text" th:field="*{surnameOne}" /></td>
+			</tr>
+			<tr>
+				<td>SURNAME_2</td>
+				<td><input type="text" th:field="*{surnameTwo}" /></td>
+			</tr>
+			<tr>
+				<td>EMAIL</td>
+				<td><input type="email" th:field="*{email}" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Crear Usuario" /></td>
+			</tr>
+		</table>
+	</form>
+</div>
+	
+	<script type="text/javascript" th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

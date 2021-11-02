@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="layout/template :: head"></head>
+<body>
+	<header th:replace="layout/template :: header"></header>
+
+	<div class="container">
+		<h3 class="text-secondary text-center" th:text="${titulo}"></h3>
+		<a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/form}">Crear</a>
+		<table class="table align-items-center mb-0">
+			<thead>
+				<tr>
+					<th class="text-uppercase text-secondary"
+						sec:authorice="hasRole('ROLE_USER')">id</th>
+					<th class="text-uppercase text-secondary">username</th>
+					<th class="text-uppercase text-secondary">password</th>
+					<th class="text-uppercase text-secondary">name</th>
+					<th class="text-uppercase text-secondary">surname_1</th>
+					<th class="text-uppercase text-secondary">surname_2</th>
+					<th class="text-uppercase text-secondary">email</th>
+					<th class="text-uppercase text-secondary">roles</th>
+					<th class="text-uppercase text-secondary"
+						sec:authorize="hasRole('ROLE_ADMIN')">editar</th>
+					<th class="text-uppercase text-secondary"
+						sec:authorize="hasRole('ROLE_ADMIN')">eliminar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="usuario: ${usuarios}">
+					<td th:text="${usuario.id}" sec:authorice="hasRole('ROLE_USER')"></td>
+					<td th:text="${usuario.username}"></td>
+					<td th:text="${usuario.password}"></td>
+					<td th:text="${usuario.name}"></td>
+					<td th:text="${usuario.surnameOne}"></td>
+					<td th:text="${usuario.surnameTwo}"></td>
+					<td th:text="${usuario.email}"></td>
+					<td th:each="rol: ${usuario.roles}"><span
+						th:text="!${rolStat.last}? ${rol.rol} + ',' : ${rol.rol}"></span>
+					</td>
+					<td sec:authorize="hasRole('ROLE_ADMIN')"><a
+						class="btn btn-primary btn-xs" th:href="@{/form/} + ${usuario.id}">editar</a></td>
+					<td sec:authorize="hasRole('ROLE_ADMIN')"><a
+						class="btn btn-danger btn-xs"
+						th:href="@{/eliminar/} + ${usuario.id}">eliminar</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<nav th:replace="paginator-nav :: paginator"></nav>
+	</div>
+
+	<footer th:replace="layout/template :: footer"></footer>
+</body>
+</html>
