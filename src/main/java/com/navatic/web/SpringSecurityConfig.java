@@ -32,9 +32,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		
 		// Autorizamos las rutas de la aplicacion segun los roles
 		http.authorizeRequests()
-		.antMatchers("/", "/css/**", "/js/**", "/img/**", "/listar").permitAll()
-		.antMatchers("/form/**").hasAnyRole("ADMIN")
-		.antMatchers("/eliminar/**").hasAnyRole("ADMIN")
+		.antMatchers("/", "/css/**", "/js/**", "/img/**").permitAll()
 		.anyRequest().authenticated()
 		.and()
 		.formLogin().successHandler(successHandler).loginPage("/login").permitAll()

@@ -23,11 +23,11 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     		<nav class="navbar navbar-expand-lg nav-fixed navbar-light">
 	    		<div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
 	    			<!-- Logotipo -->
-					<a class="navbar-brand col-4 col-lg-auto" href="https://navatic.com/"> 
+					<a class="navbar-brand col-12 col-md-4 col-lg-auto" href="https://navatic.com/"> 
 						<img th:src="@{/img/logo.svg}" class="logotipo" alt="logotipo navatic" />
 					</a>
 					<!-- Formulario Busqueda -->
-					<form class="col-6 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+					<form class="col-12 col-md-7 col-lg-auto mb-3 mb-lg-0 me-lg-3">
 						<div class="input-group">
 							<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Todas Categorias</button>
 						  	<ul class="dropdown-menu">
@@ -125,55 +125,52 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 		  
 
 	<footer th:fragment="footer" class="container-flex footer mt-auto">
-	    <div class="row">
-	      <div class="col-2">
-	        <h5>Section</h5>
-	        <ul class="nav flex-column">
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-	        </ul>
-	      </div>
-	
-	      <div class="col-2">
-	        <h5>Section</h5>
-	        <ul class="nav flex-column">
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-	        </ul>
-	      </div>
-	
-	      <div class="col-2">
-	        <h5>Section</h5>
-	        <ul class="nav flex-column">
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-	        </ul>
-	      </div>
-	
-	      <div class="col-4 offset-1">
+	    <div class="row px-4">
+	      <div class="col-lg-5">
 	        <form>
 	          <h5>Subscribe to our newsletter</h5>
 	          <p>Monthly digest of whats new and exciting from us.</p>
 	          <div class="d-flex w-100 gap-2">
 	            <label for="newsletter1" class="visually-hidden">Email address</label>
 	            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-	            <button class="btn btn-primary" type="button">Subscribe</button>
+	            <button class="btn btn-danger" type="button">Subscribe</button>
 	          </div>
 	        </form>
 	      </div>
+	      <div class="col-12 col-md-4 col-lg-2 text-center">
+	        <h5>Section</h5>
+	        <ul class="nav flex-column">
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+	        </ul>
+	      </div>
+	      <div class="col-12 col-md-4 col-lg-2 text-center">
+	        <h5>Section</h5>
+	        <ul class="nav flex-column">
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+	        </ul>
+	      </div>
+	      <div class="col-12 col-md-4 col-lg-2 text-center">
+	        <h5>Section</h5>
+	        <ul class="nav flex-column">
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+	          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+	        </ul>
+	      </div>
 	    </div>
 	
-	    <div class="container-flex copyright">
-			<small>Copyright &copy; 2021 - NAVATIC - Todos los derechos reservados.</small>
+	    <div class="container-flex copyright text-center bg-gris-1">
+			<small class="text-white">Copyright &copy; 2021 - <a href="https://navatic.com/" class="text-white">Navatic</a> - Todos los derechos reservados.</small>
 	    </div>
 	    
 		<script th:src="@{/js/bootstrap.bundle.min.js}"></script>

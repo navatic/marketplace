@@ -13,6 +13,9 @@ html{
 	font-size: 1rem;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
+	padding:0;
+	margin:0;
+	max-width: 100vw;
 }
 *,*:after,*:before{
 	-webkit-box-sizing: inherit;
@@ -22,7 +25,9 @@ html{
 	max-width: 100vw;
 }
 /* ------ CONFIGURACION BOOTSTRAP ------ */
-
+.bg-gris-1{
+	background: var(--gris1);
+}
 /* ------ CONFIGURACION TIPOGRAFIAS ------ */
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
@@ -74,6 +79,15 @@ p {
     left: -6rem;
 }
 
+
+
+/* ------ FOOTER ------ */
+.copyright{
+	height: 1.8rem;
+}
+
+
+
 /* Extra small devices <= 600px */
 @media only screen and (max-width: 600px) {
 
@@ -119,3 +133,6 @@ p {
    	 	padding-left: 0.5rem;
 	}
 }
+
+
+
